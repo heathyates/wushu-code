@@ -18,7 +18,7 @@ class BasicImplementations:
             new_word = ""
             index = None
             for i in range(len(word1)): 
-                if word1[i] is not None and word2[i] is not None: 
+                if word1[i] is not None and i in range(len(word2)): 
                     new_word = new_word + word1[i] + word2[i]
                     index = i
                 else: 
@@ -42,8 +42,8 @@ def main():
     
     #
     b = BasicImplementations()
-    word1 = "abc"
-    word2 = "pqrs"
+    word1 = "abcd"
+    word2 = "pq"
     b.mergeAlternatively(word1, word2)
 
 if __name__ == "__main__": main()
